@@ -32,7 +32,7 @@ def subir_imagenes():
         return jsonify(array)
 
     except Exception as e:
-        return 'Error en el servidor', 500
+        return 'Error en el servidorrr', 500
 
 
 if __name__ == '__main__':
