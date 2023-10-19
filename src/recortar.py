@@ -1,5 +1,5 @@
 import cv2 as cv
-import numpy as np
+
 from keras.models import load_model
 
 import random
@@ -81,7 +81,6 @@ def generar(img):
             cv.rectangle(CUBO,(i,j),(i+100,j+100),COLORES[index],-1)
             index+=1
 
-    rotated_image = cv.rotate(CUBO, cv.ROTATE_90_CLOCKWISE)
 
   
 
