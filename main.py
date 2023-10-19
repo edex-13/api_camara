@@ -1,6 +1,7 @@
 from flask import Flask, request , jsonify
 from flask_cors import CORS
 import base64
+from src/recortar.py import princiapal
 
 import os
 app = Flask(__name__)
@@ -27,8 +28,9 @@ def subir_imagenes():
                 with open(filename, 'wb') as f:
                     f.write(image_data)
         #         # images.append(filename)
+                array = princiapal()
+        return jsonify(array)
 
-        return 'Imágenes recibidas y procesadas correctamente', 200
     except Exception as e:
         return 'Error en el servidor', 500
 
